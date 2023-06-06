@@ -51,7 +51,7 @@ If you are not an existing customer, but interested in learning more, try out a 
 Install the connector to begin pulling in your Slack data into Yext Content! 
 
 
-### To install the Slack Public Content Connector:
+### To install the Adobe Experience Manager Pages Connector:
 
 1. Log in to your Yext account
 2. Navigate to the **Apps > Directory** tab in the platform (or use the link provided above).

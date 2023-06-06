@@ -1,0 +1,11 @@
+{
+  "$id": "aemp_lastModifiedDate",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Last Modified Date",
+  "group": "NONE",
+  "localization": "OVERRIDABLE",
+  "type": {
+    "dateType": {}
+  },
+  "typeId": "date"
+}

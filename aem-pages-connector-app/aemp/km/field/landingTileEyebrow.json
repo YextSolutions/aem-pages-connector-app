@@ -1,0 +1,14 @@
+{
+  "$id": "aemp_landingTileEyebrow",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Landing Tile Eyebrow",
+  "group": "NONE",
+  "localization": "OVERRIDABLE",
+  "type": {
+    "stringType": {
+      "stereotype": "MULTILINE",
+      "maxLength": 100000
+    }
+  },
+  "typeId": "string"
+}

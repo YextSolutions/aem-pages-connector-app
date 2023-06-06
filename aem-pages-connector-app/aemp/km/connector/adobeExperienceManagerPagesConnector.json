@@ -1,0 +1,217 @@
+{
+  "$id": "aemp_adobeExperienceManagerPagesConnector",
+  "$schema": "https://schema.yext.com/config/km/connector/v3",
+  "displayName": "Adobe Experience Manager Pages Connector",
+  "entityType": "aemp_page",
+  "source": {
+    "sourceConfig": {
+      "nativeSourceConfig": {
+        "source": "adobeExperienceManager",
+        "operation": "fetchPagesBasicAuth",
+        "inputs": {
+          "environmentUrl": "${{aemEnvrionmentURL}}",
+          "password": "${{aemPassword}}",
+          "path": "${{filePath}}",
+          "username": "${{aemUsername}}"
+        }
+      }
+    },
+    "selectors": [
+      {
+        "type": "JSON",
+        "header": "path",
+        "path": "path"
+      },
+      {
+        "type": "JSON",
+        "header": "title",
+        "path": "title"
+      },
+      {
+        "type": "JSON",
+        "header": "name",
+        "path": "name"
+      },
+      {
+        "type": "JSON",
+        "header": "uuid",
+        "path": "uuid"
+      },
+      {
+        "type": "JSON",
+        "header": "lastModified",
+        "path": "lastModified"
+      },
+      {
+        "type": "JSON",
+        "header": "description",
+        "path": "description"
+      },
+      {
+        "type": "JSON",
+        "header": "tags",
+        "path": "tags"
+      },
+      {
+        "type": "JSON",
+        "header": "landingTile.description",
+        "path": "landingTile.description"
+      },
+      {
+        "type": "JSON",
+        "header": "landingTile.eyebrow",
+        "path": "landingTile.eyebrow"
+      },
+      {
+        "type": "JSON",
+        "header": "textItems[].text",
+        "path": "textItems[].text"
+      }
+    ]
+  },
+  "transforms": [
+    {
+      "extractText": {
+        "inputHeader": "lastModified",
+        "newColumnHeader": "Last Modified Date (only)",
+        "extractOperation": "ALL_TEXT_BEFORE",
+        "extractFrom": "LAST_INSTANCE_MATCHING_TEXT",
+        "valueToFind": {
+          "plainText": {
+            "value": " ",
+            "ignoreCase": false
+          }
+        }
+      }
+    },
+    {
+      "formatDates": {
+        "inputHeaders": {
+          "headers": [
+            "Last Modified Date (only)"
+          ]
+        },
+        "inputFormat": "yyyy-MM-dd"
+      }
+    },
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "textItems[].text"
+          ]
+        },
+        "valueToFind": {
+          "regex": " style.*?\u003e"
+        },
+        "replacement": "\u003e"
+      }
+    },
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "textItems[].text"
+          ]
+        },
+        "valueToFind": {
+          "regex": " class.*?\u003e"
+        },
+        "replacement": "\u003e"
+      }
+    },
+    {
+      "findAndReplace": {
+        "inputHeaders": {
+          "headers": [
+            "textItems[].text"
+          ]
+        },
+        "valueToFind": {
+          "plainText": {
+            "value": "\",\"",
+            "ignoreCase": false
+          }
+        },
+        "replacement": ""
+      }
+    },
+    {
+      "function": {
+        "inputHeaders": {
+          "headers": [
+            "textItems[].text"
+          ]
+        },
+        "plugin": "aemp_decodeHtml",
+        "function": "decodeHtml"
+      }
+    },
+    {
+      "addColumn": {
+        "newColumnHeader": "Landing Page Base URL",
+        "columnValue": "${{aemEnvrionmentURL}}"
+      }
+    }
+  ],
+  "mappings": [
+    {
+      "header": "path",
+      "field": "aemp_path",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "title",
+      "field": "name",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "uuid",
+      "field": "entityId",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "Last Modified Date (only)",
+      "field": "aemp_lastModifiedDate",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "description",
+      "field": "shortDescription",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "tags",
+      "field": "aemp_tags",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "landingTile.description",
+      "field": "aemp_landingTileDescription",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "textItems[].text",
+      "field": "richTextDescription",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    },
+    {
+      "header": "landingTile.eyebrow",
+      "field": "aemp_landingTileEyebrow",
+      "subfieldPath": [],
+      "clearValueIfBlank": false
+    }
+  ],
+  "comprehensiveModeConfig": {
+    "comprehensiveSet": "ENTITIES_CREATED_BY_THIS_CONNECTOR",
+    "actionOnMissingEntities": "DELETE"
+  }
+}

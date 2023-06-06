@@ -1,0 +1,20 @@
+{
+  "$id": "aemp_tags",
+  "$schema": "https://schema.yext.com/config/km/field/v1",
+  "displayName": "Tags",
+  "group": "NONE",
+  "localization": "OVERRIDABLE",
+  "type": {
+    "listType": {
+      "typeId": "string",
+      "maxLength": 5000,
+      "type": {
+        "stringType": {
+          "maxLength": 100000,
+          "stereotype": "SIMPLE"
+        }
+      }
+    }
+  },
+  "typeId": "list"
+}

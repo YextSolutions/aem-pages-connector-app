@@ -1,0 +1,18 @@
+{
+  "$id": "aemp_page.default",
+  "$schema": "https://schema.yext.com/config/km/field-eligibility-group/v1",
+  "name": "Page-default",
+  "entityType": "aemp_page",
+  "fields": [
+    "aemp_jcrName",
+    "aemp_landingTileDescription",
+    "aemp_landingTileEyebrow",
+    "aemp_lastModifiedDate",
+    "aemp_path",
+    "aemp_tags",
+    "landingPageUrl",
+    "richTextDescription",
+    "shortDescription"
+  ],
+  "required": []
+}

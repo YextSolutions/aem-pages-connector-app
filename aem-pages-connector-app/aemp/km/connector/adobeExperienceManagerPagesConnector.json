@@ -1,8 +1,8 @@
 {
   "$id": "aemp_adobeExperienceManagerPagesConnector",
-  "$schema": "https://schema.yext.com/config/km/connector/v3",
+  "$schema": "https://schema.yext.com/config/km/connector/v4",
   "displayName": "Adobe Experience Manager Pages Connector",
-  "entityType": "aemp_page",
+  "entityTypes": ["aemp_page"],
   "source": {
     "sourceConfig": {
       "nativeSourceConfig": {

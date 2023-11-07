@@ -3,62 +3,6 @@
   "primaryEntityType": "aemp_page",
   "entityTypeSettings": [
     {
-      "entityType": "hotel",
-      "disabled": true
-    },
-    {
-      "entityType": "location",
-      "disabled": true
-    },
-    {
-      "entityType": "job",
-      "disabled": true
-    },
-    {
-      "entityType": "healthcareProfessional",
-      "disabled": true
-    },
-    {
-      "entityType": "faq",
-      "disabled": true
-    },
-    {
-      "entityType": "healthcareFacility",
-      "disabled": true
-    },
-    {
-      "entityType": "event",
-      "disabled": true
-    },
-    {
-      "entityType": "hotelRoomType",
-      "disabled": true
-    },
-    {
-      "entityType": "atm",
-      "disabled": true
-    },
-    {
-      "entityType": "restaurant",
-      "disabled": true
-    },
-    {
-      "entityType": "organization",
-      "disabled": true
-    },
-    {
-      "entityType": "helpArticle",
-      "disabled": true
-    },
-    {
-      "entityType": "product",
-      "disabled": true
-    },
-    {
-      "entityType": "financialProfessional",
-      "disabled": true
-    },
-    {
       "entityType": "aemp_page",
       "defaultFieldEligibilityGroup": "aemp_page.default",
       "disabled": false

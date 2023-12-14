@@ -181,7 +181,7 @@
     },
     {
       "header": "description",
-      "field": "shortDescription",
+      "field": "shortDescriptionV2",
       "subfieldPath": [],
       "clearValueIfBlank": false
     },
@@ -199,7 +199,7 @@
     },
     {
       "header": "textItems[].text",
-      "field": "richTextDescription",
+      "field": "richTextDescriptionV2",
       "subfieldPath": [],
       "clearValueIfBlank": false
     },

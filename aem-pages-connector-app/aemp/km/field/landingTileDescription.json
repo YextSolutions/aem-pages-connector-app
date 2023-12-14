@@ -7,6 +7,7 @@
   "type": {
     "richTextType": {
       "maxLength": 100000,
+      "supportedFormatFilter": {
       "supportedFormat": [
         "BLOCK_QUOTE",
         "BOLD",

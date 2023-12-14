@@ -8,7 +8,7 @@
     "richTextV2Type": {
       "maxLength": 100000,
       "supportedFormatFilter": {
-        "supportedFormat": [
+        "supportedFormats": [
           "BLOCK_QUOTE",
           "BOLD",
           "BULLETED_LIST",

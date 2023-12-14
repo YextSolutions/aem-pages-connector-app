@@ -182,25 +182,39 @@
     {
       "header": "description",
       "field": "shortDescriptionV2",
-      "subfieldPath": [],
+      "subfieldPath": [
+        {
+          "name": "json"
+        }
+      ],
       "clearValueIfBlank": false
     },
     {
       "header": "tags",
       "field": "aemp_tags",
-      "subfieldPath": [],
+      "subfieldPath": [
+        
+      ],
       "clearValueIfBlank": false
     },
     {
       "header": "landingTile.description",
       "field": "aemp_landingTileDescription",
-      "subfieldPath": [],
+      "subfieldPath": [
+        {
+          "name": "json"
+        }
+      ],
       "clearValueIfBlank": false
     },
     {
       "header": "textItems[].text",
       "field": "richTextDescriptionV2",
-      "subfieldPath": [],
+      "subfieldPath": [
+        {
+          "name": "json"
+        }
+      ],
       "clearValueIfBlank": false
     },
     {

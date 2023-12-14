@@ -5,7 +5,7 @@
   "group": "NONE",
   "localization": "OVERRIDABLE",
   "type": {
-    "richTextType": {
+    "richTextV2Type": {
       "maxLength": 100000,
       "supportedFormatFilter": {
       "supportedFormat": [
@@ -27,5 +27,5 @@
       ]
     }
   },
-  "typeId": "richText"
+  "typeId": "richTextV2"
 }

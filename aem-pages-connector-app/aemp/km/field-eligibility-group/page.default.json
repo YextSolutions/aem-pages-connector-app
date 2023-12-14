@@ -11,8 +11,8 @@
     "aemp_path",
     "aemp_tags",
     "landingPageUrl",
-    "richTextDescription",
-    "shortDescription"
+    "richTextDescriptionV2",
+    "shortDescriptionV2"
   ],
   "required": []
 }

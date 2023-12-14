@@ -8,24 +8,25 @@
     "richTextV2Type": {
       "maxLength": 100000,
       "supportedFormatFilter": {
-      "supportedFormat": [
-        "BLOCK_QUOTE",
-        "BOLD",
-        "BULLETED_LIST",
-        "CODE_BLOCK",
-        "CODE_SPAN",
-        "HEADINGS",
-        "HORIZONTAL_LINE",
-        "HYPERLINK",
-        "IMAGE",
-        "ITALICS",
-        "NUMBERED_LIST",
-        "STRIKETHROUGH",
-        "SUBSCRIPT",
-        "SUPERSCRIPT",
-        "UNDERLINE"
-      ]
-    }
-  },
-  "typeId": "richTextV2"
+        "supportedFormat": [
+          "BLOCK_QUOTE",
+          "BOLD",
+          "BULLETED_LIST",
+          "CODE_BLOCK",
+          "CODE_SPAN",
+          "HEADINGS",
+          "HORIZONTAL_LINE",
+          "HYPERLINK",
+          "IMAGE",
+          "ITALICS",
+          "NUMBERED_LIST",
+          "STRIKETHROUGH",
+          "SUBSCRIPT",
+          "SUPERSCRIPT",
+          "UNDERLINE"
+        ]
+      }
+    },
+    "typeId": "richTextV2"
+  }
 }
